@@ -14,9 +14,7 @@
         - Home: Página principal. Va a tener una pequeña descripción. Portada llamativa.
         - Recetas: Va a tener recetas, cuando se clica a una receta se va abrir una pestaña nueva.
         - Comentarios en la Receta: Se va a situar en cada receta.
-        - Comentarios en la página: Va a estar en la página principal.
         - Contactos: Formulario para contactarnos. 
-        - About Us: Nuestra información y información de la empresa.
         - Footer: Copyright, información de contacto.
 - Roles:
     - Vladi: Diseño / Ayudante
