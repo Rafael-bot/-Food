@@ -7,12 +7,14 @@
     - HTML
     - CSS / BOOTSTRAP
     - JS
-    - NODE.JS
-- Diseño:
+    - Django 
+    - Diseño:
     - Color:![](https://i.imgur.com/TA2yvwy.png)
     - Secciones:
         - Home: Página principal. Va a tener una pequeña descripción. Portada llamativa.
         - Recetas: Va a tener recetas, cuando se clica a una receta se va abrir una pestaña nueva.
+        - Recetas individual.
+        - Login y Register. Opcional
         - Comentarios en la Receta: Se va a situar en cada receta.
         - Contactos: Formulario para contactarnos. 
         - Footer: Copyright, información de contacto.
