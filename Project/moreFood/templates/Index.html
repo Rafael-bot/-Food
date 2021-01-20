@@ -3,387 +3,406 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="{% static 'Css/main.css' %}" type="text/css">
-  <link rel="stylesheet" href="{% static 'Css/theme.css' %}">
-  <title>+Food</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+          type="text/css">
+    <link rel="stylesheet" href="{% static 'Css/main.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'Css/theme.css' %}">
+    <title>+Food</title>
 </head>
 
 <body class="text-dark">
-  <nav class="navbar navbar-expand-md bg-primary navbar-light shadow" style="">
+<nav class="navbar navbar-expand-md bg-primary navbar-light shadow" style="">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12"><img class="img-fluid d-block" src="{% static 'Imagenes/Logo_PlusFood 1.png' %}"></div>
-      </div> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar10" aria-expanded="true">
-        <span class="navbar-toggler-icon" style="color: #000;"></span>
-      </button>
-      <div class="navbar-collapse collapse hidden" id="navbar10" style="">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"> <a class="nav-link text-dark" href="#">Inicio</a> </li>
-          <li class="nav-item"> <a class="nav-link text-dark" href="#alimentos">Alimentos</a> </li>
-          <li class="nav-item"> <a class="nav-link text-dark" href="#recetas">Recetas</a> </li>
-          <li class="nav-item"> <a class="nav-link text-dark" href="#dietas">Dietas</a> </li>
-          <li class="nav-item pr-3"> <a class="nav-link text-dark" href="#contacto">Contacto</a> </li>
-          <button class="btn btn-danger shadow ml-auto pl-2 pr-2 w-100"><a href="{% url 'logout' %}" class="text-decoration-none text-light">Cerrar Sesión </a></button>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="py-5 bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12"><img class="img-fluid d-block mx-auto" src="{% static 'Imagenes/Cake.png' %}" style="	transform:  rotate(-10deg) ;"></div>
-      </div>
-    </div>
-  </div>
-  <div class="py-5 text-center bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="mb-3 text-uppercase"><b>¿Qué es +Food?</b></h1>
-          <p class="">Bienvenido si has llegado aquí es porque tal vez tienes hambre pero estas cansado de la monotonía y quieres experimentar en la cocina.<br>Más Food es tu plataforma, aquí encontrarás un sin fín de recetas, información sobre ingredientes y podrás ayudarte fisicamente gracias a sus dietas.<br><br></p>
+        <div class="row">
+            <div class="col-md-12"><img class="img-fluid d-block" src="{% static 'Imagenes/Logo_PlusFood 1.png' %}">
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="bg-primary py-3 pt-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 id="alimentos" class="text-center"><b>ALIMENTOS</b></h3>
+        <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
+                data-target="#navbar10" aria-expanded="true">
+            <span class="navbar-toggler-icon" style="color: #000;"></span>
+        </button>
+        <div class="navbar-collapse collapse hidden" id="navbar10" style="">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#alimentos">Alimentos</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#recetas">Recetas</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#dietas">Dietas</a></li>
+                <li class="nav-item pr-3"><a class="nav-link text-dark" href="#contacto">Contacto</a></li>
+                <button class="btn btn-danger shadow ml-auto pl-2 pr-2 w-100"><a href="{% url 'logout' %}"
+                                                                                 class="text-decoration-none text-light">Cerrar
+                    Sesión </a></button>
+            </ul>
         </div>
-      </div>
     </div>
-  </div>
-  <div class="bg-primary">
+</nav>
+<div class="py-5 bg-light">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p class="lead text-center" style="">Filtros:</p>
+        <div class="row">
+            <div class="col-md-12"><img class="img-fluid d-block mx-auto" src="{% static 'Imagenes/Cake.png' %}"
+                                        style="	transform:  rotate(-10deg) ;"></div>
         </div>
-      </div>
     </div>
-  </div>
-  <div class="bg-primary py-0" style="">
+</div>
+<div class="py-5 text-center bg-light">
     <div class="container">
-      <div class="row">
-      </div>
-      <div class="row">
-        <div class="col-md-12 text-left col-1">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="mb-3 text-uppercase"><b>¿Qué es +Food?</b></h1>
+                <p class="">Bienvenido si has llegado aquí es porque tal vez tienes hambre pero estas cansado de la
+                    monotonía y quieres experimentar en la cocina.<br>Más Food es tu plataforma, aquí encontrarás un sin
+                    fín de recetas, información sobre ingredientes y podrás ayudarte fisicamente gracias a sus
+                    dietas.<br><br></p>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="py-1 w-100 text-center">
-            <div class="btn-group mx-2 shadow">
-              <button type="button" class="btn btn-light">Carne</button>
-              <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false"></button>
-              <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(64px, 38px, 0px);">
-                <a class="dropdown-item" href="#">Pescado</a>
-                <a class="dropdown-item" href="#" style="">Verduras</a>
-                <a class="dropdown-item" href="#" contenteditable="true">Frutas</a><a class="dropdown-item" href="#">Lácteos</a>
+    </div>
+</div>
+<div class="bg-primary py-3 pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 id="alimentos" class="text-center"><b>ALIMENTOS</b></h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="lead text-center" style="">Filtros:</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-primary py-0" style="">
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-left col-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="py-1 w-100 text-center">
+                    <div class="btn-group mx-2 shadow">
+                        <button type="button" class="btn btn-light">Carne</button>
+                        <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-expanded="false"></button>
+                        <div class="dropdown-menu" x-placement="bottom-start"
+                             style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(64px, 38px, 0px);">
+                            <a class="dropdown-item" href="#">Pescado</a>
+                            <a class="dropdown-item" href="#" style="">Verduras</a>
+                            <a class="dropdown-item" href="#" contenteditable="true">Frutas</a><a class="dropdown-item"
+                                                                                                  href="#">Lácteos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col-md-4" style="">
+              <div class="py-1 w-100 text-center">
+                <div class="btn-group mx-2 shadow">
+                  <button type="button" class="btn btn-light">Con Gluten</button>
+                  <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false"></button>
+                  <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(64px, 38px, 0px);">
+                    <a class="dropdown-item" href="#">Sin Gluten</a>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <!--<div class="col-md-4" style="">
-          <div class="py-1 w-100 text-center">
-            <div class="btn-group mx-2 shadow">
-              <button type="button" class="btn btn-light">Con Gluten</button>
-              <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false"></button>
-              <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(64px, 38px, 0px);">
-                <a class="dropdown-item" href="#">Sin Gluten</a>
+            <div class="col-md-4">
+              <div class="py-1 text-center w-100">
+                <div class="btn-group mx-2 shadow">
+                  <button type="button" class="btn btn-light">Con Azucares Añadidos</button>
+                  <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false"></button>
+                  <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(184px, 38px, 0px);">
+                    <a class="dropdown-item" href="#">Sin Azucares Añadidos</a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </div>-->
         </div>
-        <div class="col-md-4">
-          <div class="py-1 text-center w-100">
-            <div class="btn-group mx-2 shadow">
-              <button type="button" class="btn btn-light">Con Azucares Añadidos</button>
-              <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false"></button>
-              <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(184px, 38px, 0px);">
-                <a class="dropdown-item" href="#">Sin Azucares Añadidos</a>
-              </div>
-            </div>
+        <!--<div class="col-12 row justify-content-center">
+          <div style="" class="row">
           </div>
         </div>-->
-      </div>
-      <div class="col-12 row justify-content-center">
-        <div style="" class="row">
-        </div>
-      </div>
-      <div class="row justify-content-center" style="">
-        <div class="col-lg-3 p-4 bg-light m-4 rounded shadow">
-          <p class="lead mb-1 text-center"> <b>Manzana</b></p><a class="btn btn-secondary w-100" href="#">Más Información</a>
-        </div>
-        <div class="col-lg-3 p-4 bg-light m-4 rounded shadow">
-          <p class="lead mb-1 text-center"> <b>Piña</b></p><a class="btn btn-secondary w-100" href="#">Más Información</a>
-        </div>
-        <div class="col-lg-3 p-4 bg-light m-4 rounded shadow">
-          <p class="lead mb-1 text-center"> <b>Melocotón</b></p><a class="btn btn-secondary w-100" href="#">Más Información</a>
-        </div>
-        <div class="col-lg-3 p-4 bg-light m-4 rounded shadow">
-          <p class="lead mb-1 text-center"> <b>Kiwi</b></p><a class="btn btn-secondary w-100" href="#">Más Información</a>
-        </div>
-        <div class="col-lg-3 p-4 bg-light m-4 rounded shadow">
-          <p class="lead mb-1 text-center"> <b>Fresas</b></p><a class="btn btn-secondary w-100" href="#">Más Información</a>
-        </div>
-        <div class="col-lg-3 p-4 bg-light m-4 rounded shadow">
-          <p class="lead mb-1 text-center"> <b>Pera</b></p><a class="btn btn-secondary w-100" href="#">Más Información</a>
-        </div>
-        <div class="col-lg-3 p-4 bg-light m-4 shadow rounded">
-          <p class="lead mb-1 text-center"> <b>Coco</b></p><a class="btn btn-secondary w-100" href="#">Más Información</a>
-        </div>
-        <div class="col-lg-3 p-4 bg-light m-4 rounded shadow">
-          <p class="lead mb-1 text-center"> <b>Melón</b></p><a class="btn btn-secondary w-100" href="#">Más Información</a>
-        </div>
-        <div class="col-lg-3 p-4 bg-light m-4 rounded shadow">
-          <p class="lead mb-1 text-center"> <b>Platano</b></p><a class="btn btn-secondary w-100" href="#">Más Información</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="bg-light py-3 pt-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 id="recetas" class="text-center"><b>RECETAS</b></h3>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="bg-light" style="">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 py-3">
-          <div class="btn-group shadow w-100">
-            <button class="btn dropdown-toggle btn-primary" data-toggle="dropdown"> Más visitados</button>
-            <div class="dropdown-menu"> <a class="dropdown-item" href="#">Más Me Gustas</a>
+        <div class="row justify-content-center" style="">
+            {% for a in alimentos %}
+            <div class="col-lg-3 p-4 bg-light m-4 rounded shadow">
+                <p class="lead mb-1 text-center"><b>{{a.titulo}}</b></p><a class="btn btn-secondary w-100" href="{{a.descripción}}" target="_blank">Más
+                Información</a>
             </div>
-          </div>
+            {% endfor %}
+
         </div>
-        <div class="col-md-6">
-          <form class="form-inline py-3">
-            <div class="input-group ml-auto">
-              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Buscar">
-              <div class="input-group-append"><button class="btn btn-primary border border-dark" type="button"><i class="fa fa-search"></i></button></div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 rounded shadow my-3 bg-primary" style="">
-          <div class="row">
+    </div>
+</div>
+<div class="bg-light py-3 pt-5">
+    <div class="container">
+        <div class="row">
             <div class="col-md-12">
-              <p class="lead text-right pt-3 pr-5" contenteditable="true" style="">10K</p>
+                <h3 id="recetas" class="text-center"><b>RECETAS</b></h3>
             </div>
+        </div>
+    </div>
+</div>
+<div class="bg-light" style="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 py-3">
+                <div class="btn-group shadow w-100">
+                    <button class="btn dropdown-toggle btn-primary" data-toggle="dropdown"> Más visitados</button>
+                    <div class="dropdown-menu"><a class="dropdown-item" href="#">Más Me Gustas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <form class="form-inline py-3">
+                    <div class="input-group ml-auto">
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Buscar">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary border border-dark" type="button"><i
+                                    class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 rounded shadow my-3 bg-primary" style="">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="lead text-right pt-3 pr-5" contenteditable="true" style="">10K</p>
+                    </div>
+                </div>
+                <h5 class="text-center text-uppercase py-0"><b>Tortilla de patatas</b></h5><img
+                    class="img-fluid d-block mx-auto" src="Imagenes/tortillas.jpg" width="800" height="600">
+                <h6 class="text-center text-uppercase py-0 pt-3"><b>DESCRIPCIÓN</b></h6>
+                <p class="py-3 px-5">Paragraph. Then, my friend, when darkness overspreads my eyes, and heaven and earth
+                    seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often
+                    think with longing.</p>
+                <h6 class="text-center text-uppercase py-0 pt-3"><b>INGREDIENTES</b></h6>
+                <p class="text-center">Huevos</p>
+                <p class="text-center">Patatas</p>
+                <h6 class="text-center text-uppercase py-0 pt-3"><b>PREPARACIÓN</b></h6>
+                <p class="px-5 pb-4">Paragraph. Then, my friend, when darkness overspreads my eyes, and heaven and earth
+                    seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often
+                    think with longing.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="bg-light py-3 pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="text-center"><b>COMENTARIOS</b></h3>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-light py-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12 rounded shadow-lg" style="">
+            <p class="lead text-danger pt-2" style="">USER:</p>
+            <p class="">Paragraph. Then, my friend, when darkness overspreads my eyes, and heaven and earth seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often think with longing.</p>
+            <p class="lead text-right">10K</p>
           </div>
-          <h5 class="text-center text-uppercase py-0"><b>Tortilla de patatas</b></h5><img class="img-fluid d-block mx-auto" src="Imagenes/tortillas.jpg" width="800" height="600">
-          <h6 class="text-center text-uppercase py-0 pt-3"><b>DESCRIPCIÓN</b></h6>
-          <p class="py-3 px-5">Paragraph. Then, my friend, when darkness overspreads my eyes, and heaven and earth seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often think with longing.</p>
-          <h6 class="text-center text-uppercase py-0 pt-3"><b>INGREDIENTES</b></h6>
-          <p class="text-center">Huevos</p>
-          <p class="text-center">Patatas</p>
-          <h6 class="text-center text-uppercase py-0 pt-3"><b>PREPARACIÓN</b></h6>
-          <p class="px-5 pb-4">Paragraph. Then, my friend, when darkness overspreads my eyes, and heaven and earth seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often think with longing.</p>
         </div>
       </div>
     </div>
   </div>
-  <!--<div class="bg-light py-3 pt-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="text-center"><b>COMENTARIOS</b></h3>
+</div>
+<div class="bg-light text-right">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"><a class="btn shadow btn-secondary" href="#">Crear Comentario</a></div>
+    </div>
+  </div>
+</div>
+<div class="text-right bg-light p-4" style="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12 pt-2">
+            <div class="form-group"><input type="email" class="form-control" placeholder="NOMBRE:"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group"><input type="email" class="form-control" placeholder="COMENTARIO:"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"><a class="btn w-100 btn-secondary shadow" href="#">Publicar</a></div>
         </div>
       </div>
     </div>
   </div>
-  <div class="bg-light py-2">
+</div>-->
+<div class="bg-primary pt-5">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-12 rounded shadow-lg" style="">
-              <p class="lead text-danger pt-2" style="">USER:</p>
-              <p class="">Paragraph. Then, my friend, when darkness overspreads my eyes, and heaven and earth seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often think with longing.</p>
-              <p class="lead text-right">10K</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="bg-light text-right">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12"><a class="btn shadow btn-secondary" href="#">Crear Comentario</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="text-right bg-light p-4" style="">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-12 pt-2">
-              <div class="form-group"><input type="email" class="form-control" placeholder="NOMBRE:"></div>
-            </div>
-          </div>
-          <div class="row">
+        <div class="row">
             <div class="col-md-12">
-              <div class="form-group"><input type="email" class="form-control" placeholder="COMENTARIO:"></div>
+                <h3 id="dietas" class="text-center"><b>DIETAS</b></h3>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12"><a class="btn w-100 btn-secondary shadow" href="#">Publicar</a></div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>-->
-  <div class="bg-primary pt-5">
+</div>
+<div class="bg-primary py-1 pb-5">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 id="dietas" class="text-center"><b>DIETAS</b></h3>
+        <div class="row">
+            <div class="col-md-6 py-3">
+                <div class="btn-group shadow w-100">
+                    <button class="btn dropdown-toggle btn-light" data-toggle="dropdown"> Más visitados</button>
+                    <div class="dropdown-menu"><a class="dropdown-item" href="#">Más Me Gustas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <form class="form-inline py-3">
+                    <div class="input-group ml-auto">
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Buscar">
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary border border-dark" type="button"><i
+                                    class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-      </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container-fluid bg-light">
+                    <div class="row shadow-lg" style="">
+                        <div class="p-0 col-lg-6"><img class="img-fluid d-block mx-auto"
+                                                       src="https://static.pingendo.com/cover-moon.svg" width="400">
+                        </div>
+                        <div class="px-md-5 p-3 d-flex flex-column justify-content-center text-center col-lg-6">
+                            <h1>I enjoy with my whole heart</h1>
+                            <p class="mb-3 lead">Has taken possession of my entire soul, like these sweet mornings of
+                                spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in
+                                this spot, which was created for the bliss of souls like mine.</p> <a
+                                class="btn btn-link" href="#">Mostrar más...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="bg-primary py-1 pb-5">
+</div>
+<div class="pt-5 bg-light">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 py-3">
-          <div class="btn-group shadow w-100">
-            <button class="btn dropdown-toggle btn-light" data-toggle="dropdown"> Más visitados</button>
-            <div class="dropdown-menu"> <a class="dropdown-item" href="#">Más Me Gustas</a>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 id="contacto" class="text-center"><b>CONTACTANOS</b></h3>
             </div>
-          </div>
         </div>
-        <div class="col-md-6">
-          <form class="form-inline py-3">
-            <div class="input-group ml-auto">
-              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Buscar">
-              <div class="input-group-append"><button class="btn btn-secondary border border-dark" type="button"><i class="fa fa-search"></i></button></div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="container-fluid bg-light">
-            <div class="row shadow-lg" style="">
-              <div class="p-0 col-lg-6"> <img class="img-fluid d-block mx-auto" src="https://static.pingendo.com/cover-moon.svg" width="400"> </div>
-              <div class="px-md-5 p-3 d-flex flex-column justify-content-center text-center col-lg-6">
-                <h1>I enjoy with my whole heart</h1>
-                <p class="mb-3 lead">Has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p> <a class="btn btn-link" href="#">Mostrar más...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-  <div class="pt-5 bg-light">
+</div>
+<div class="py-3 bg-light">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 id="contacto" class="text-center"><b>CONTACTANOS</b></h3>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="py-3 bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center" style="">
-          <p>Has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-5 p-4">
-          <p class="lead mt-3"> <b>Soporte</b></p>
-          <p> <a href="#">+1 234 567 89</a> </p>
-          <p> <a href="#">support@hello.com</a> </p>
-          <p class="lead mt-3"> <b>Unirse</b></p>
-          <p> <a href="#">+1 234 567 89</a> </p>
-          <p> <a href="#">sales@hello.com</a> </p>
-          <p class="lead mt-3"> <b>General</b> </p>
-          <p> <a href="#">info@hello.com</a> </p>
-        </div>
-        <div class="col-md-7 p-4">
-          <form>
-            <div class="form-row">
-              <div class="form-group col-md-6"> <input type="text" class="form-control" id="form36" placeholder="NOMBRE"> </div>
-              <div class="form-group col-md-6"> <input type="text" class="form-control" id="form37" placeholder="APELLIDOS"> </div>
+        <div class="row">
+            <div class="col-md-12 text-center" style="">
+                <p>Has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my
+                    whole heart. I am alone, and feel the charm of existence in this spot.</p>
             </div>
-            <div class="form-group"> <input type="text" class="form-control" id="form38" placeholder="COMPANÍA"> </div>
-            <div class="form-group"> <input type="email" class="form-control" id="form39" placeholder="EMAIL"> </div>
-            <div class="form-row">
-              <div class="form-group col-md-6"> <input type="number" class="form-control" id="form40" placeholder="NÚMERO"> </div>
-              <div class="form-group col-md-6"> <input type="text" class="form-control" id="form41" placeholder="CONTINENTE"> </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 p-4">
+                <p class="lead mt-3"><b>Soporte</b></p>
+                <p><a href="#">+1 234 567 89</a></p>
+                <p><a href="#">support@hello.com</a></p>
+                <p class="lead mt-3"><b>Unirse</b></p>
+                <p><a href="#">+1 234 567 89</a></p>
+                <p><a href="#">sales@hello.com</a></p>
+                <p class="lead mt-3"><b>General</b></p>
+                <p><a href="#">info@hello.com</a></p>
             </div>
-            <div class="form-group"> <input type="text" class="form-control" id="form42" placeholder="TEMA"> </div>
-            <div class="form-group"> <textarea class="form-control" id="form43" rows="3" placeholder="MENSAJE"></textarea> </div> <button type="submit" class="btn w-100 btn-secondary shadow">ENVIAR</button>
-          </form>
+            <div class="col-md-7 p-4">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6"><input type="text" class="form-control" id="form36"
+                                                                placeholder="NOMBRE"></div>
+                        <div class="form-group col-md-6"><input type="text" class="form-control" id="form37"
+                                                                placeholder="APELLIDOS"></div>
+                    </div>
+                    <div class="form-group"><input type="text" class="form-control" id="form38" placeholder="COMPANÍA">
+                    </div>
+                    <div class="form-group"><input type="email" class="form-control" id="form39" placeholder="EMAIL">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6"><input type="number" class="form-control" id="form40"
+                                                                placeholder="NÚMERO"></div>
+                        <div class="form-group col-md-6"><input type="text" class="form-control" id="form41"
+                                                                placeholder="CONTINENTE"></div>
+                    </div>
+                    <div class="form-group"><input type="text" class="form-control" id="form42" placeholder="TEMA">
+                    </div>
+                    <div class="form-group"><textarea class="form-control" id="form43" rows="3"
+                                                      placeholder="MENSAJE"></textarea></div>
+                    <button type="submit" class="btn w-100 btn-secondary shadow">ENVIAR</button>
+                </form>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <div class="py-3 bg-primary">
+</div>
+<div class="py-3 bg-primary">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12"><img class="img-fluid d-block mx-auto" src="Imagenes/Logo_PlusFood 1.png"></div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-6 p-3" style="transition: all 0.25s;">
-          <h5 class="text-center"><b>Rutas</b></h5>
-          <ul class="list-unstyled">
-            <li class="text-center"> <a href="#">Inicio</a> </li>
-            <li class="text-center"> <a href="#">Alimentos</a> </li>
-            <li class="text-center"> <a href="#">Recetas</a> </li>
-            <li class="text-center"> <a href="#">Dietas</a> </li>
-          </ul>
+        <div class="row">
+            <div class="col-md-12"><img class="img-fluid d-block mx-auto" src="Imagenes/Logo_PlusFood 1.png"></div>
         </div>
-        <div class="col-lg-4 col-6 p-3" style="transition: all 0.25s;">
-          <h5 class="text-center"> <b>Otros</b></h5>
-          <ul class="list-unstyled">
-            <li class="text-center"> <a href="#">Contacto</a> </li>
-          </ul>
+        <div class="row">
+            <div class="col-lg-4 col-6 p-3" style="transition: all 0.25s;">
+                <h5 class="text-center"><b>Rutas</b></h5>
+                <ul class="list-unstyled">
+                    <li class="text-center"><a href="#">Inicio</a></li>
+                    <li class="text-center"><a href="#">Alimentos</a></li>
+                    <li class="text-center"><a href="#">Recetas</a></li>
+                    <li class="text-center"><a href="#">Dietas</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-6 p-3" style="transition: all 0.25s;">
+                <h5 class="text-center"><b>Otros</b></h5>
+                <ul class="list-unstyled">
+                    <li class="text-center"><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-1 p-3" style="transition: all 0.25s;">
+                <h5 class="text-center"><b class="text-center">Siguenos</b></h5>
+                <div class="row">
+                    <div class="col-md-12 d-flex align-items-center justify-content-between my-2"><a href="#">
+                        <i class="d-block fa fa-facebook-official text-muted fa-lg mr-2"></i>
+                    </a> <a href="#">
+                        <i class="d-block fa fa-instagram text-muted fa-lg mx-2"></i>
+                    </a> <a href="#">
+                        <i class="d-block fa fa-twitter text-muted fa-lg ml-2"></i>
+                    </a></div>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-3 col-md-1 p-3" style="transition: all 0.25s;">
-          <h5 class="text-center"> <b class="text-center">Siguenos</b></h5>
-          <div class="row">
-            <div class="col-md-12 d-flex align-items-center justify-content-between my-2"> <a href="#">
-                <i class="d-block fa fa-facebook-official text-muted fa-lg mr-2"></i>
-              </a> <a href="#">
-                <i class="d-block fa fa-instagram text-muted fa-lg mx-2"></i>
-              </a> <a href="#">
-                <i class="d-block fa fa-twitter text-muted fa-lg ml-2"></i>
-              </a> </div>
-          </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="mb-0 mt-2">Copyright 2020-2021 +FOOD. All rights reserved</p>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <p class="mb-0 mt-2">Copyright 2020-2021 +FOOD. All rights reserved</p>
-        </div>
-      </div>
     </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
-          style=""></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-          crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
-          style=""></script>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
+        style=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
+        style=""></script>
 </body>
 
 </html>
