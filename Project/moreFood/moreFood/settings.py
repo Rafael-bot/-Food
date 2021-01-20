@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'Lobby.apps.LobbyConfig',
+    'Register.apps.RegisterConfig'
 ]
 
 MIDDLEWARE = [
