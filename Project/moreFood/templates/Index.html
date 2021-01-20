@@ -78,15 +78,15 @@
 </div>
 <div class="bg-primary py-0" style="">
     <div class="container">
-        <div class="row">
+        <!--<div class="row">
         </div>
         <div class="row">
             <div class="col-md-12 text-left col-1">
             </div>
-        </div>
+        </div>-->
         <div class="row">
             <div class="col-md-4">
-                <div class="py-1 w-100 text-center">
+                <div class=" w-50 text-center">
                     <div class="btn-group mx-2 shadow">
                         <button type="button" class="btn btn-light">Carne</button>
                         <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split"
@@ -131,7 +131,8 @@
         <div class="row justify-content-center" style="">
             {% for a in alimentos %}
             <div class="col-lg-3 p-4 bg-light m-4 rounded shadow">
-                <p class="lead mb-1 text-center"><b>{{a.titulo}}</b></p><a class="btn btn-secondary w-100" href="{{a.descripción}}" target="_blank">Más
+
+                <p class="lead mb-1 text-center"><img src="{{a.imagen}}" class="img-thumbnail"><b>{{a.titulo}}</b></p><a class="btn btn-secondary w-100" href="{{a.descripción}}" target="_blank">Más
                 Información</a>
             </div>
             {% endfor %}
