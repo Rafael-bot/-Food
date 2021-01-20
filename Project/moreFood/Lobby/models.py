@@ -6,6 +6,7 @@ class Alimentos(models.Model):
     titulo = models.CharField('Titulo',max_length=20)
     descripción = models.CharField('Descripcion',max_length=200)
     categoria = models.CharField('Categoria',max_length=50)
+    imagen = models.CharField('imagen',max_length=100, null=True)
 
 class Recetas(models.Model):
     titulo = models.CharField('Titulo', max_length=20)
