@@ -6,15 +6,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="main.css" type="text/css">
+  <link rel="stylesheet" href="{% static 'Css/main.css' %}" type="text/css">
   <link rel="stylesheet" href="{% static 'Css/theme.css' %}">
+  <title>+Food</title>
 </head>
 
 <body class="text-dark">
   <nav class="navbar navbar-expand-md bg-primary navbar-light shadow" style="">
     <div class="container">
       <div class="row">
-        <div class="col-md-12"><img class="img-fluid d-block" src="Imagenes/Logo_PlusFood 1.png"></div>
+        <div class="col-md-12"><img class="img-fluid d-block" src="{% static 'Imagenes/Logo_PlusFood 1.png' %}"></div>
       </div> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar10" aria-expanded="true">
         <span class="navbar-toggler-icon" style="color: #000;"></span>
       </button>
@@ -25,7 +26,7 @@
           <li class="nav-item"> <a class="nav-link text-dark" href="#">Recetas</a> </li>
           <li class="nav-item"> <a class="nav-link text-dark" href="#">Dietas</a> </li>
           <li class="nav-item pr-3"> <a class="nav-link text-dark" href="#">Contacto</a> </li>
-          <button class="btn btn-danger shadow ml-auto pl-2 pr-2 w-100"> Cerrar Sesión </button>
+          <button class="btn btn-danger shadow ml-auto pl-2 pr-2 w-100"><a href="{% url 'logout' %}" class="text-decoration-none text-light">Cerrar Sesión </a></button>
         </ul>
       </div>
     </div>
@@ -33,7 +34,7 @@
   <div class="py-5 bg-light">
     <div class="container">
       <div class="row">
-        <div class="col-md-12"><img class="img-fluid d-block mx-auto" src="Imagenes/Cake.png" style="	transform:  rotate(-10deg) ;"></div>
+        <div class="col-md-12"><img class="img-fluid d-block mx-auto" src="{% static 'Imagenes/Cake.png' %}" style="	transform:  rotate(-10deg) ;"></div>
       </div>
     </div>
   </div>
@@ -374,9 +375,15 @@
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" style=""></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" style=""></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
+          style=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
+          style=""></script>
 </body>
 
 </html>

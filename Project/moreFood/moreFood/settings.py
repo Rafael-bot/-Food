@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.urls import reverse, reverse_lazy
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -124,3 +126,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 STATIC_ROOT = ''
+
+LOGIN_REDIRECT_URL = '/'
+
+
