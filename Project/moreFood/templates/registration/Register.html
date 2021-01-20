@@ -1,0 +1,91 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+    <link rel="stylesheet" href="{% static 'Css/theme.css' %}">
+    <title>+Food</title>
+
+</head>
+<body>
+
+<!--<h1 class="mb-4">Register</h1>
+<form method="post" action="">
+    {% csrf_token %}
+
+    {{form}}
+
+    <button type="submit">Register</button>
+</form>-->
+
+<div class="py-5 text-center" style="">
+    <div class="container">
+        <div class="row shadow">
+            <div class="mx-auto bg-white p-5" style="">
+                <h1 class="mb-4">Register</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    {% for field in form %}
+                    <p>
+                        {{ field.label_tag }}<br>
+                        {{ field }}
+                        {% if field.help_text %}
+                        <small style="color: grey">{{ field.help_text }}</small>
+                        {% endif %}
+                        {% for error in field.errors %}
+                    <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                    </p>
+                    {% endfor %}
+                    <small class="form-text text-muted text-right">
+                        <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+                        <a
+                                href="/accounts/login/" class="text-decoration-none">
+                            <button type="button" class="btn btn-block btn-secondary mt-2">Login</button>
+                        </a>
+                    </small>
+                    <!--
+                    <div class="form-group">
+                        <label for="username" >Username</label>
+                        {{form.username}}
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="username">Contraseña</label>
+                        {{form.password1}}
+                        <label for="username" class="mt-2">Contraseña (Confirmación)</label>
+                        {{form.password2}}
+                    </div>
+                    <small class="form-text text-muted text-right">
+                        <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+                        <a
+                                href="/accounts/login/" class="text-decoration-none">
+                            <button type="button" class="btn btn-block btn-secondary mt-2">Login</button>
+                        </a>
+                    </small>-->
+                </form>
+            </div>
+            <small class="form-text text-muted text-right">
+            </small>
+        </div>
+        <small class="form-text text-muted text-right">
+        </small>
+    </div>
+    <small class="form-text text-muted text-right">
+    </small>
+</div>
+<small class="form-text text-muted text-right">
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
+            style=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"
+            style=""></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
+            style=""></script>
+</body>
+</html>
