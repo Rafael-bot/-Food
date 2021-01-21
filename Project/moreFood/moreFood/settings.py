@@ -130,4 +130,10 @@ STATIC_ROOT = ''
 
 LOGIN_REDIRECT_URL = '/'
 
+EMAIL_HOST = 'smtp.googlemail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'plussfood.sa@gmail.com'
+EMAIL_HOST_PASSWORD = 'rafita123'
+EMAIL_USE_TLS = True
+
 
