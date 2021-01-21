@@ -174,24 +174,26 @@
         </div>
         <div class="row">
             <div class="col-md-12 rounded shadow my-3 bg-primary" style="">
+                {% for r in recetas %}
                 <div class="row">
                     <div class="col-md-12">
-                        <p class="lead text-right pt-3 pr-5" contenteditable="true" style="">10K</p>
+                        <p class="lead text-right pt-3 pr-5">10K</p>
                     </div>
                 </div>
-                <h5 class="text-center text-uppercase py-0"><b>Tortilla de patatas</b></h5><img
-                    class="img-fluid d-block mx-auto" src="Imagenes/tortillas.jpg" width="800" height="600">
+
+                <h5 class="text-center text-uppercase py-0"><b>{{r.titulo}}</b></h5><img
+                    class="img-fluid d-block mx-auto" src="{{r.imagen}}" width="800" height="600">
                 <h6 class="text-center text-uppercase py-0 pt-3"><b>DESCRIPCIÓN</b></h6>
-                <p class="py-3 px-5">Paragraph. Then, my friend, when darkness overspreads my eyes, and heaven and earth
-                    seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often
-                    think with longing.</p>
+                <p class="py-3 px-5">{{r.descripción}}</p>
                 <h6 class="text-center text-uppercase py-0 pt-3"><b>INGREDIENTES</b></h6>
-                <p class="text-center">Huevos</p>
-                <p class="text-center">Patatas</p>
+                <p class="text-center">{{r.ingredientes}}</p>
                 <h6 class="text-center text-uppercase py-0 pt-3"><b>PREPARACIÓN</b></h6>
-                <p class="px-5 pb-4">Paragraph. Then, my friend, when darkness overspreads my eyes, and heaven and earth
-                    seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often
-                    think with longing.</p>
+                <p class="px-5 pb-4">{{r.preparación}}</p>
+
+                <br>
+
+                {% endfor %}
+
             </div>
         </div>
     </div>
