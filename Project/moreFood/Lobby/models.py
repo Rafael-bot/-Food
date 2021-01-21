@@ -21,6 +21,8 @@ class Comentarios(models.Model):
 class Dietas(models.Model):
     titulo = models.CharField('Titulo', max_length=20)
     descripción = models.CharField('Descripción', max_length=300)
+    links = models.CharField('links', max_length=200, null=True)
+    imagen = models.CharField('imagen', max_length=100, null=True)
 
 
 
