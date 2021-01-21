@@ -45,12 +45,21 @@ def lobby_views(request):
             Q(titulo__icontains=busquedaDieta)
         ).distinct()
 
-
     busquedaReceta = request.GET.get("buscarReceta")
     if busquedaReceta:
         r = Recetas.objects.filter(
             Q(titulo__icontains=busquedaReceta)
         ).distinct()
+
+
+    busquedaAlimento = request.GET.get("buscarAlimentos")
+    if busquedaAlimento:
+        a = Alimentos.objects.filter(
+            Q(titulo__icontains=busquedaAlimento)|
+            Q(categoria__icontains=busquedaAlimento)
+        ).distinct()
+
+
 
     return render(request, 'Index.html', context={'alimentos': a, 'dietas': d, 'recetas': r})
 
