@@ -161,11 +161,11 @@
                 </div>-->
             </div>
             <div class="col-md-6">
-                <form class="form-inline py-3">
+                <form class="form-inline py-3" method="GET" action="#recetas">
                     <div class="input-group ml-auto">
-                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Buscar">
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Buscar..." name="buscarReceta" value="{{request.GET.buscarReceta}}">
                         <div class="input-group-append">
-                            <button class="btn btn-primary border border-dark" type="button"><i
+                            <button class="btn btn-primary border border-dark" type="submit"><i
                                     class="fa fa-search"></i></button>
                         </div>
                     </div>
@@ -270,11 +270,11 @@
                 </div>-->
             </div>
             <div class="col-md-6">
-                <form class="form-inline py-3">
+                <form class="form-inline py-3" method="GET" action="#dietas">
                     <div class="input-group ml-auto">
-                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Buscar">
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Buscar..." name="buscarDieta" value="{{request.GET.buscarDieta}}">
                         <div class="input-group-append">
-                            <button class="btn btn-secondary border border-dark" type="button"><i
+                            <button class="btn btn-secondary border border-dark" type="submit"><i
                                     class="fa fa-search"></i></button>
                         </div>
                     </div>
