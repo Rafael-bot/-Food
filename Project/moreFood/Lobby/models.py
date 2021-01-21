@@ -13,6 +13,7 @@ class Recetas(models.Model):
     descripción = models.CharField('Descripcion', max_length=200)
     ingredientes = models.CharField('Ingredientes', max_length=300)
     preparación = models.CharField('Preparación', max_length=400)
+    imagen = models.CharField('imagen', max_length=100, null=True)
 
 class Comentarios(models.Model):
     user = models.CharField('User', max_length=20)

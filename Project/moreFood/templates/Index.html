@@ -132,7 +132,7 @@
             {% for a in alimentos %}
             <div class="col-lg-3 p-4 bg-light m-4 rounded shadow">
 
-                <p class="lead mb-1 text-center"><img src="{{a.imagen}}" class="img-thumbnail"><b>{{a.titulo}}</b></p><a
+                <p class="lead mb-1 text-center"><img src="{{a.imagen}}" class="img-thumbnail w-100"><b>{{a.titulo}}</b></p><a
                     class="btn btn-secondary w-100" href="{{a.descripción}}" target="_blank">Más
                 Información</a>
             </div>
@@ -174,24 +174,26 @@
         </div>
         <div class="row">
             <div class="col-md-12 rounded shadow my-3 bg-primary" style="">
+                {% for r in recetas %}
                 <div class="row">
                     <div class="col-md-12">
-                        <p class="lead text-right pt-3 pr-5" contenteditable="true" style="">10K</p>
+                        <p class="lead text-right pt-3 pr-5">10K</p>
                     </div>
                 </div>
-                <h5 class="text-center text-uppercase py-0"><b>Tortilla de patatas</b></h5><img
-                    class="img-fluid d-block mx-auto" src="Imagenes/tortillas.jpg" width="800" height="600">
+
+                <h5 class="text-center text-uppercase py-0"><b>{{r.titulo}}</b></h5><img
+                    class="img-fluid d-block mx-auto" src="{{r.imagen}}" width="800" height="600">
                 <h6 class="text-center text-uppercase py-0 pt-3"><b>DESCRIPCIÓN</b></h6>
-                <p class="py-3 px-5">Paragraph. Then, my friend, when darkness overspreads my eyes, and heaven and earth
-                    seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often
-                    think with longing.</p>
+                <p class="py-3 px-5 text-justify">{{r.descripción}}</p>
                 <h6 class="text-center text-uppercase py-0 pt-3"><b>INGREDIENTES</b></h6>
-                <p class="text-center">Huevos</p>
-                <p class="text-center">Patatas</p>
+                <p class="text-center text-justify">{{r.ingredientes}}</p>
                 <h6 class="text-center text-uppercase py-0 pt-3"><b>PREPARACIÓN</b></h6>
-                <p class="px-5 pb-4">Paragraph. Then, my friend, when darkness overspreads my eyes, and heaven and earth
-                    seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often
-                    think with longing.</p>
+                <p class="px-5 pb-4 text-justify">{{r.preparación}}</p>
+
+                <br>
+
+                {% endfor %}
+
             </div>
         </div>
     </div>
@@ -284,12 +286,12 @@
                 <div class="container-fluid bg-light">
                     <div class="row shadow-lg" style="">
                         {% for d in dietas %}
-                        <div class="p-0 col-lg-6"><img class="img-fluid d-block mx-auto rounded"
+                        <div class="p-0 col-lg-6 align-content-center"><img class="img-fluid d-block mx-auto rounded pt-5"
                                                        src="{{d.imagen}}" width="400">
                         </div>
                         <div class="px-md-5 p-3 d-flex flex-column justify-content-center text-center col-lg-6">
                             <h1>{{d.titulo}}</h1>
-                            <p class="mb-3 lead">{{d.descripción}}</p> <a
+                            <p class="mb-3 lead text-justify">{{d.descripción}}</p> <a
                                 class="btn btn-link" href="{{d.links}}" target="_blank">Mostrar más...</a>
                         </div>
                         {% endfor %}
@@ -360,13 +362,21 @@
 <div class="py-3 bg-primary">
     <div class="container">
         <div class="row">
+<<<<<<< HEAD
             <div class="col-md-12"><img class="img-fluid d-block mx-auto" src="{% static 'Imagenes/Logo_PlusFood 1.png' %}"></div>
+=======
+            <div class="col-md-12"><img class="img-fluid d-block mx-auto" src="{% static 'Imagenes\Logo_PlusFood 1.png' %}"></div>
+>>>>>>> b88fe813bc2bdf860f5806e88a95b93021a930e0
         </div>
         <div class="row">
             <div class="col-lg-4 col-6 p-3" style="transition: all 0.25s;">
                 <h5 class="text-center"><b>Rutas</b></h5>
                 <ul class="list-unstyled">
+<<<<<<< HEAD
                     <li class="text-center"><a href="#">Inicio</a></li>
+=======
+                    <li class="text-center"><a href="/">Inicio</a></li>
+>>>>>>> b88fe813bc2bdf860f5806e88a95b93021a930e0
                     <li class="text-center"><a href="#alimentos">Alimentos</a></li>
                     <li class="text-center"><a href="#recetas">Recetas</a></li>
                     <li class="text-center"><a href="#dietas">Dietas</a></li>
@@ -381,11 +391,11 @@
             <div class="col-lg-3 col-md-1 p-3" style="transition: all 0.25s;">
                 <h5 class="text-center"><b class="text-center">Siguenos</b></h5>
                 <div class="row">
-                    <div class="col-md-12 d-flex align-items-center justify-content-between my-2"><a href="#">
+                    <div class="col-md-12 d-flex align-items-center justify-content-between my-2"><a href="https://www.facebook.com" target="_blank">
                         <i class="d-block fa fa-facebook-official text-muted fa-lg mr-2"></i>
-                    </a> <a href="#">
+                    </a> <a href="https://www.instagram.com" target="_blank">
                         <i class="d-block fa fa-instagram text-muted fa-lg mx-2"></i>
-                    </a> <a href="#">
+                    </a> <a href="https://twitter.com/home" target="_blank">
                         <i class="d-block fa fa-twitter text-muted fa-lg ml-2"></i>
                     </a></div>
                 </div>
