@@ -184,11 +184,11 @@
                 <h5 class="text-center text-uppercase py-0"><b>{{r.titulo}}</b></h5><img
                     class="img-fluid d-block mx-auto" src="{{r.imagen}}" width="800" height="600">
                 <h6 class="text-center text-uppercase py-0 pt-3"><b>DESCRIPCIÓN</b></h6>
-                <p class="py-3 px-5">{{r.descripción}}</p>
+                <p class="py-3 px-5 text-justify">{{r.descripción}}</p>
                 <h6 class="text-center text-uppercase py-0 pt-3"><b>INGREDIENTES</b></h6>
-                <p class="text-center">{{r.ingredientes}}</p>
+                <p class="text-center text-justify">{{r.ingredientes}}</p>
                 <h6 class="text-center text-uppercase py-0 pt-3"><b>PREPARACIÓN</b></h6>
-                <p class="px-5 pb-4">{{r.preparación}}</p>
+                <p class="px-5 pb-4 text-justify">{{r.preparación}}</p>
 
                 <br>
 
@@ -286,12 +286,12 @@
                 <div class="container-fluid bg-light">
                     <div class="row shadow-lg" style="">
                         {% for d in dietas %}
-                        <div class="p-0 col-lg-6"><img class="img-fluid d-block mx-auto rounded"
+                        <div class="p-0 col-lg-6 align-content-center"><img class="img-fluid d-block mx-auto rounded pt-5"
                                                        src="{{d.imagen}}" width="400">
                         </div>
                         <div class="px-md-5 p-3 d-flex flex-column justify-content-center text-center col-lg-6">
                             <h1>{{d.titulo}}</h1>
-                            <p class="mb-3 lead">{{d.descripción}}</p> <a
+                            <p class="mb-3 lead text-justify">{{d.descripción}}</p> <a
                                 class="btn btn-link" href="{{d.links}}" target="_blank">Mostrar más...</a>
                         </div>
                         {% endfor %}
