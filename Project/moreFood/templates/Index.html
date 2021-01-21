@@ -132,7 +132,8 @@
             {% for a in alimentos %}
             <div class="col-lg-3 p-4 bg-light m-4 rounded shadow">
 
-                <p class="lead mb-1 text-center"><img src="{{a.imagen}}" class="img-thumbnail"><b>{{a.titulo}}</b></p><a class="btn btn-secondary w-100" href="{{a.descripción}}" target="_blank">Más
+                <p class="lead mb-1 text-center"><img src="{{a.imagen}}" class="img-thumbnail"><b>{{a.titulo}}</b></p><a
+                    class="btn btn-secondary w-100" href="{{a.descripción}}" target="_blank">Más
                 Información</a>
             </div>
             {% endfor %}
@@ -282,16 +283,17 @@
             <div class="col-md-12">
                 <div class="container-fluid bg-light">
                     <div class="row shadow-lg" style="">
+                        {% for d in dietas %}
                         <div class="p-0 col-lg-6"><img class="img-fluid d-block mx-auto"
-                                                       src="https://static.pingendo.com/cover-moon.svg" width="400">
+                                                       src="{{d.imagen}}" width="400">
                         </div>
                         <div class="px-md-5 p-3 d-flex flex-column justify-content-center text-center col-lg-6">
-                            <h1>I enjoy with my whole heart</h1>
-                            <p class="mb-3 lead">Has taken possession of my entire soul, like these sweet mornings of
-                                spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in
-                                this spot, which was created for the bliss of souls like mine.</p> <a
-                                class="btn btn-link" href="#">Mostrar más...</a>
+                            <h1>{{d.titulo}}</h1>
+                            <p class="mb-3 lead">{{d.descripción}}</p> <a
+                                class="btn btn-link" href="{{d.links}}" target="_blank">Mostrar más...</a>
                         </div>
+                        {% endfor %}
+
                     </div>
                 </div>
             </div>
@@ -311,6 +313,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center" style="">
+
                 <p>Has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my
                     whole heart. I am alone, and feel the charm of existence in this spot.</p>
             </div>
