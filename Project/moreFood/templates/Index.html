@@ -316,43 +316,39 @@
         <div class="row">
             <div class="col-md-12 text-center" style="">
 
-                <p>Has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my
-                    whole heart. I am alone, and feel the charm of existence in this spot.</p>
+                <p>
+                    Puedes ponerte en contacto con nuestro servicio de atencion al cliente. Rellenando el siguiente formulario con tus datos personales. Y nuestros especialistas se podran en contacto con tigo a la mayor bervedad posible.
+                </p>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-5 p-4">
+            <div class=" p-4">
                 <p class="lead mt-3"><b>Soporte</b></p>
-                <p><a href="#">+1 234 567 89</a></p>
-                <p><a href="#">support@hello.com</a></p>
-                <p class="lead mt-3"><b>Unirse</b></p>
-                <p><a href="#">+1 234 567 89</a></p>
-                <p><a href="#">sales@hello.com</a></p>
-                <p class="lead mt-3"><b>General</b></p>
-                <p><a href="#">info@hello.com</a></p>
+                <p>+34 699 51 30 72</p>
+                <p>plussfood.sa@gmail.com</p>
             </div>
             <div class="col-md-7 p-4">
-                <form>
+                <form method="POST" action="">
+                    {% csrf_token %}
                     <div class="form-row">
                         <div class="form-group col-md-6"><input type="text" class="form-control" id="form36"
-                                                                placeholder="NOMBRE"></div>
+                                                                placeholder="NOMBRE" name="nombre" required></div>
                         <div class="form-group col-md-6"><input type="text" class="form-control" id="form37"
-                                                                placeholder="APELLIDOS"></div>
+                                                                placeholder="APELLIDOS" name="apellido" required></div>
                     </div>
-                    <div class="form-group"><input type="text" class="form-control" id="form38" placeholder="COMPANÍA">
-                    </div>
-                    <div class="form-group"><input type="email" class="form-control" id="form39" placeholder="EMAIL">
+
+                    <div class="form-group"><input type="email" class="form-control" id="form39" placeholder="EMAIL" name="userEmail" required>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6"><input type="number" class="form-control" id="form40"
-                                                                placeholder="NÚMERO"></div>
+                                                                placeholder="NÚMERO" name="tlfn" required></div>
                         <div class="form-group col-md-6"><input type="text" class="form-control" id="form41"
-                                                                placeholder="CONTINENTE"></div>
+                                                                placeholder="CONTINENTE" name="continente" required></div>
                     </div>
-                    <div class="form-group"><input type="text" class="form-control" id="form42" placeholder="TEMA">
+                    <div class="form-group"><input type="text" class="form-control" id="form42" placeholder="TEMA" name="tema">
                     </div>
                     <div class="form-group"><textarea class="form-control" id="form43" rows="3"
-                                                      placeholder="MENSAJE"></textarea></div>
+                                                      placeholder="MENSAJE" name="mensaje"></textarea></div>
                     <button type="submit" class="btn w-100 btn-secondary shadow">ENVIAR</button>
                 </form>
             </div>
