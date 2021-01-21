@@ -67,23 +67,8 @@
         </div>
     </div>
 </div>
-<!--<div class="bg-primary">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <p class="lead text-center" style="">Filtros:</p>
-            </div>
-        </div>
-    </div>
-</div>-->
 <div class="bg-primary py-0" style="">
     <div class="container">
-        <!--<div class="row">
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-left col-1">
-            </div>
-        </div>-->
         <div class="w-100">
             <div class="md-6 justify-content-right">
                 <form class="form-inline py-3 " method="GET" action="#alimentos">
@@ -91,7 +76,7 @@
 
                         <div class="input-group-append justify-content-right">
                             <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Buscar..."
-                               name="buscarAlimentos" value="{{request.GET.buscarAlimentos}}">
+                                   name="buscarAlimentos" value="{{request.GET.buscarAlimentos}}">
                             <button class="btn btn-secondary border border-dark" type="submit"><i
                                     class="fa fa-search"></i></button>
                         </div>
@@ -99,33 +84,7 @@
                 </form>
 
             </div>
-            <!--<div class="col-md-4" style="">
-              <div class="py-1 w-100 text-center">
-                <div class="btn-group mx-2 shadow">
-                  <button type="button" class="btn btn-light">Con Gluten</button>
-                  <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false"></button>
-                  <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(64px, 38px, 0px);">
-                    <a class="dropdown-item" href="#">Sin Gluten</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="py-1 text-center w-100">
-                <div class="btn-group mx-2 shadow">
-                  <button type="button" class="btn btn-light">Con Azucares Añadidos</button>
-                  <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false"></button>
-                  <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(184px, 38px, 0px);">
-                    <a class="dropdown-item" href="#">Sin Azucares Añadidos</a>
-                  </div>
-                </div>
-              </div>
-            </div>-->
         </div>
-        <!--<div class="col-12 row justify-content-center">
-          <div style="" class="row">
-          </div>
-        </div>-->
         <div class="row justify-content-center" style="">
             {% for a in alimentos %}
             <div class="col-lg-3 p-4 bg-light m-4 rounded shadow">
@@ -153,11 +112,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 py-3">
-                <!--<div class="btn-group shadow w-100">
-                    <button class="btn dropdown-toggle btn-primary" data-toggle="dropdown"> Más visitados</button>
-                    <div class="dropdown-menu"><a class="dropdown-item" href="#">Más Me Gustas</a>
-                    </div>
-                </div>-->
             </div>
             <div class="col-md-6">
                 <form class="form-inline py-3" method="GET" action="#recetas">
@@ -175,12 +129,6 @@
         <div class="row">
             <div class="col-md-12 rounded shadow my-3 bg-primary" style="">
                 {% for r in recetas %}
-                <!--<div class="row">
-                    <div class="col-md-12">
-                        <p class="lead text-right pt-3 pr-5">10K</p>
-                    </div>
-                </div>-->
-
                 <h5 class="text-center text-uppercase py-3"><b>{{r.titulo}}</b></h5><img
                     class="img-fluid d-block mx-auto" src="{{r.imagen}}" width="800" height="600">
                 <h6 class="text-center text-uppercase py-0 pt-3"><b>DESCRIPCIÓN</b></h6>
@@ -198,58 +146,6 @@
         </div>
     </div>
 </div>
-<!--<div class="bg-light py-3 pt-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h3 class="text-center"><b>COMENTARIOS</b></h3>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="bg-light py-2">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="row">
-          <div class="col-md-12 rounded shadow-lg" style="">
-            <p class="lead text-danger pt-2" style="">USER:</p>
-            <p class="">Paragraph. Then, my friend, when darkness overspreads my eyes, and heaven and earth seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often think with longing.</p>
-            <p class="lead text-right">10K</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="bg-light text-right">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12"><a class="btn shadow btn-secondary" href="#">Crear Comentario</a></div>
-    </div>
-  </div>
-</div>
-<div class="text-right bg-light p-4" style="">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="row">
-          <div class="col-md-12 pt-2">
-            <div class="form-group"><input type="email" class="form-control" placeholder="NOMBRE:"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="form-group"><input type="email" class="form-control" placeholder="COMENTARIO:"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12"><a class="btn w-100 btn-secondary shadow" href="#">Publicar</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>-->
 <div class="bg-primary pt-5">
     <div class="container">
         <div class="row">
