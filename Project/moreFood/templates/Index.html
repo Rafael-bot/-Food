@@ -1,3 +1,4 @@
+<!--Variable donde se encuentra los archivos estaticos Css y Imagenes. En nuestro caso.-->
 {% load static %}
 
 <html>
@@ -5,20 +6,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!--Fuentes de letra-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
           type="text/css">
+    <!--Archivo de css personalizado-->
     <link rel="stylesheet" href="{% static 'Css/main.css' %}" type="text/css">
 
     <!--Bootstrap CSS/SCSS-->
     <link rel="stylesheet" href="{% static 'Css/theme.css' %}">
+
     <title>+Food</title>
 </head>
 
 <body class="text-dark">
+<!--Nav-->
 <nav class="navbar navbar-expand-md bg-primary navbar-light shadow" style="">
     <div class="container">
         <div class="row">
+            <!--Imagen del Logo-->
             <div class="col-md-12"><img class="img-fluid d-block" src="{% static 'Imagenes/Logo_PlusFood 1.png' %}">
             </div>
         </div>
@@ -26,6 +31,7 @@
                 data-target="#navbar10" aria-expanded="true">
             <span class="navbar-toggler-icon" style="color: #000;"></span>
         </button>
+        <!--Menu de los links del nav-->
         <div class="navbar-collapse collapse hidden" id="navbar10" style="">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link text-dark" href="#">Inicio</a></li>
@@ -33,6 +39,7 @@
                 <li class="nav-item"><a class="nav-link text-dark" href="#recetas">Recetas</a></li>
                 <li class="nav-item"><a class="nav-link text-dark" href="#dietas">Dietas</a></li>
                 <li class="nav-item pr-3"><a class="nav-link text-dark" href="#contacto">Contacto</a></li>
+                <!--Boton de log out-->
                 <button class="btn btn-danger shadow ml-auto pl-2 pr-2 w-100"><a href="{% url 'logout' %}"
                                                                                  class="text-decoration-none text-light">Cerrar
                     Sesión </a></button>
@@ -40,6 +47,7 @@
         </div>
     </div>
 </nav>
+<!--Contenedor para la imagen principal-->
 <div class="py-5 bg-light">
     <div class="container">
         <div class="row">
@@ -48,6 +56,7 @@
         </div>
     </div>
 </div>
+<!--Contenedor de ¿Qué es +Food?-->
 <div class="py-5 text-center bg-light">
     <div class="container">
         <div class="row">
@@ -61,6 +70,7 @@
         </div>
     </div>
 </div>
+<!--Contenedor del titulo de alimentos-->
 <div class="bg-primary py-3 pt-5">
     <div class="container">
         <div class="row">
@@ -70,13 +80,15 @@
         </div>
     </div>
 </div>
+<!--Contenedor donde esta el buscador de alimentos y los alimentos-->
 <div class="bg-primary py-0" style="">
     <div class="container">
+        <!--Contenedor donde se va a guardar el buscador de alimentos-->
         <div class="w-100">
             <div class="md-6 justify-content-right">
+                <!--el formulario utilizara el metodo GET-->
                 <form class="form-inline py-3 " method="GET" action="#alimentos">
                     <div class="input-group ml-auto ">
-
                         <div class="input-group-append justify-content-right">
                             <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Buscar..."
                                    name="buscarAlimentos" value="{{request.GET.buscarAlimentos}}">
@@ -85,23 +97,23 @@
                         </div>
                     </div>
                 </form>
-
             </div>
         </div>
+        <!--Contenedor donde se muestra los alimento de la base de datos-->
         <div class="row justify-content-center" style="">
+            <!--Recorremos con un for todos los alimentos que se encuentran en la base de datos y lo vamos añadiendo.-->
             {% for a in alimentos %}
             <div class="col-lg-3 p-4 bg-light m-4 rounded shadow">
-
                 <p class="lead mb-1 text-center"><img src="{{a.imagen}}" class="img-thumbnail w-100"><b>{{a.titulo}}</b>
                 </p><a
                     class="btn btn-secondary w-100" href="{{a.descripción}}" target="_blank">Más
                 Información</a>
             </div>
             {% endfor %}
-
         </div>
     </div>
 </div>
+<!--Contenedor del titulo de recetas-->
 <div class="bg-light py-3 pt-5">
     <div class="container">
         <div class="row">
@@ -111,12 +123,17 @@
         </div>
     </div>
 </div>
+<!--Contenedor donde esta el buscador de recetas y las recetas-->
 <div class="bg-light" style="">
     <div class="container">
+        <!--Contenedor donde esta el buscador de recetas-->
         <div class="row">
+            <!--Contenedor para rellenar huecos-->
             <div class="col-md-6 py-3">
             </div>
+            <!--Contenedor donde esta el buscador de recetas-->
             <div class="col-md-6">
+                <!--el formulario utilizara el metodo GET y te ridereccionara a recetas-->
                 <form class="form-inline py-3" method="GET" action="#recetas">
                     <div class="input-group ml-auto">
                         <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Buscar..."
@@ -129,8 +146,10 @@
                 </form>
             </div>
         </div>
+        <!--Contenedor donde mostramos todas las recetas de la base de datos-->
         <div class="row">
             <div class="col-md-12 rounded shadow my-3 bg-primary" style="">
+                <!--Bucle donde recorremos todas la recetas y imprimimos todos sus campos-->
                 {% for r in recetas %}
                 <h5 class="text-center text-uppercase py-3"><b>{{r.titulo}}</b></h5><img
                     class="img-fluid d-block mx-auto" src="{{r.imagen}}" width="800" height="600">
@@ -140,15 +159,14 @@
                 <p class="py-3 px-5 text-justify">{{r.ingredientes}}</p>
                 <h6 class="text-center text-uppercase py-0 pt-3"><b>PREPARACIÓN</b></h6>
                 <p class="px-5 pb-4 text-justify">{{r.preparación}}</p>
-
                 <br>
-
                 {% endfor %}
 
             </div>
         </div>
     </div>
 </div>
+<!--Contenedor del titulo de dietas-->
 <div class="bg-primary pt-5">
     <div class="container">
         <div class="row">
@@ -158,16 +176,15 @@
         </div>
     </div>
 </div>
+<!--Contenedor donde estara el buscador y las dietas-->
 <div class="bg-primary py-1 pb-5">
     <div class="container">
+        <!--En este contenedor esta el buscador-->
         <div class="row">
+            <!--Contenedor para rellenar huecos-->
             <div class="col-md-6 py-3">
-                <!--<div class="btn-group shadow w-100">
-                    <button class="btn dropdown-toggle btn-light" data-toggle="dropdown"> Más visitados</button>
-                    <div class="dropdown-menu"><a class="dropdown-item" href="#">Más Me Gustas</a>
-                    </div>
-                </div>-->
             </div>
+            <!--Contenedor don esta el buscador-->
             <div class="col-md-6">
                 <form class="form-inline py-3" method="GET" action="#dietas">
                     <div class="input-group ml-auto">
@@ -181,10 +198,12 @@
                 </form>
             </div>
         </div>
+        <!--Contenedor donde esta todas las dietas-->
         <div class="row">
             <div class="col-md-12">
                 <div class="container-fluid bg-light">
                     <div class="row shadow-lg" style="">
+                        <!--Bucle for donde mostramos las dietas de la base de datos-->
                         {% for d in dietas %}
                         <div class="p-0 col-lg-6 align-content-center"><img
                                 class="img-fluid d-block mx-auto rounded pt-5"
@@ -196,13 +215,13 @@
                                 class="btn btn-link" href="{{d.links}}" target="_blank">Mostrar más...</a>
                         </div>
                         {% endfor %}
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!--Contenedor donde estara el titulo de Contactanos-->
 <div class="pt-5 bg-light">
     <div class="container">
         <div class="row">
@@ -212,11 +231,12 @@
         </div>
     </div>
 </div>
+<!--Contenedor del contactanos-->
 <div class="py-3 bg-light">
     <div class="container">
+        <!--Contenedor de un texto introductorio -->
         <div class="row">
             <div class="col-md-12 text-center" style="">
-
                 <p>
                     Puedes ponerte en contacto con nuestro servicio de atencion al cliente. Rellenando el siguiente
                     formulario con tus datos personales. Y nuestros especialistas se podran en contacto con tigo a la
@@ -224,14 +244,18 @@
                 </p>
             </div>
         </div>
+        <!--Contenedor donde esta el formulario de contactanos-->
         <div class="row">
+            <!--Aqui esta los contacto de soopprte de la empresa-->
             <div class=" p-4">
                 <p class="lead mt-3"><b>Soporte</b></p>
                 <p>+34 699 51 30 72</p>
                 <p>plussfood.sa@gmail.com</p>
             </div>
             <div class="col-md-7 p-4">
+                <!--Formulario que el usuario enviara una peticion POST al servidor, y le rediccionara a la pagina principal-->
                 <form method="POST" action="">
+                    <!--token de seguridad-->
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="form-group col-md-6"><input type="text" class="form-control" id="form36"
@@ -261,13 +285,17 @@
         </div>
     </div>
 </div>
+<!--Contenedor del footer-->
 <div class="py-3 bg-primary">
     <div class="container">
+        <!--Contenedor del logo -->
         <div class="row">
             <div class="col-md-12"><img class="img-fluid d-block mx-auto"
                                         src="{% static 'Imagenes\Logo_PlusFood 1.png' %}"></div>
         </div>
+        <!--Contenedor de las rutas de la pagina y las redes sociales-->
         <div class="row">
+            <!--Contenedor donde se almacena las rutas de la pagina (rutas)-->
             <div class="col-lg-4 col-6 p-3" style="transition: all 0.25s;">
                 <h5 class="text-center"><b>Rutas</b></h5>
                 <ul class="list-unstyled">
@@ -277,12 +305,14 @@
                     <li class="text-center"><a href="#dietas">Dietas</a></li>
                 </ul>
             </div>
+            <!--Contenedor donde se almacena las rutas de la pagina (otros)-->
             <div class="col-lg-4 col-6 p-3" style="transition: all 0.25s;">
                 <h5 class="text-center"><b>Otros</b></h5>
                 <ul class="list-unstyled">
                     <li class="text-center"><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
+            <!--Contenedor done esta las redes sociales de la empresa-->
             <div class="col-lg-3 col-md-1 p-3" style="transition: all 0.25s;">
                 <h5 class="text-center"><b class="text-center">Siguenos</b></h5>
                 <div class="row">
@@ -297,6 +327,7 @@
                 </div>
             </div>
         </div>
+        <!--Contenedor done esta el copyright-->
         <div class="row">
             <div class="col-md-12 text-center">
                 <p class="mb-0 mt-2">Copyright 2020-2021 +FOOD. All rights reserved</p>
