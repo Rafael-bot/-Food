@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+#Aqui registramos nuestra aplicativos
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -108,6 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
+#Idioma del codigo
 LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
@@ -128,12 +129,14 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = ''
 
+#Si se logue te redirije a la pagina principal
 LOGIN_REDIRECT_URL = '/'
 
-EMAIL_HOST = 'smtp.googlemail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'plussfood.sa@gmail.com'
-EMAIL_HOST_PASSWORD = 'rafita123'
+#Configuracion de email
+EMAIL_HOST = 'smtp.googlemail.com'#Servicio
+EMAIL_PORT = 587 #Puerto que utiliza
+EMAIL_HOST_USER = 'plussfood.sa@gmail.com' #A que gmail le llegua
+EMAIL_HOST_PASSWORD = 'rafita123' #Contraseña
 EMAIL_USE_TLS = True
 
 
