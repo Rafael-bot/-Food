@@ -139,6 +139,7 @@ git merge branchName
 ## Instalación
 
  1. Deberas tener instalado [python ](https://www.python.org/downloads/). Tendras que instalar la ultima versión.
+ 2. Clonas la rama Sprint-3 del repositorio.
  2. Instalar [pip](https://docs.python.org/es/3.8/library/venv.html) en tu entorno virtual del sistema.
  3. Tienes que crear un [virtualenv](https://docs.python.org/es/3.8/library/venv.html) en tu projecto.
  4. Te vas a la terminal, y te situas dentro de la carpeta /Project/ donde has clonado el repositorio.
