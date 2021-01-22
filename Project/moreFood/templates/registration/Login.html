@@ -1,11 +1,15 @@
+<!--Variable donde se encuentra los archivos estaticos Css y Imagenes. En nuestro caso.-->
 {% load static %}
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Bootstrap CSS/SCSS-->
     <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
     <link rel="stylesheet" href="{% static 'Css/theme.css' %}">
+
     <title>+Food</title>
 
 </head>
@@ -15,15 +19,21 @@
         <div class="row rounded shadow-lg">
             <div class="mx-auto col-md-6 col-10 bg-white p-5">
                 <h1 class="mb-4">Log in</h1>
+                <!--Formulario de login. Enviara una peticion post al servidor-->
                 <form method="post" action="{% url 'login' %}">
+                    <!--token de seguridad-->
                     {% csrf_token %}
+                    <!--Contenedor de Usuario-->
                     <div class="form-group"><input type="text" class="form-control" placeholder="Usuario"
                                                    name="username" id="form9" required></div>
+                    <!--Contenedor de Contraseña-->
                     <div class="form-group mb-3"><input type="password" class="form-control" placeholder="Contraseña"
                                                         name="password" id="form10" required> <small
                             class="form-text text-muted text-right">
                     </small></div>
+                    <!--Enviar el formulario-->
                     <button type="submit" value="{{ next }}" class="btn btn-primary btn-block">Submit</button>
+                    <!--Si no tienes cuenta. Con este boton te puedes ir a la parte de register para crea una cuenta-->
                     <a href="/register" class="text-decoration-none">
                         <button type="button" class="btn btn-block btn-secondary mt-2">Registrarse</button>
                     </a>
@@ -33,7 +43,7 @@
     </div>
 </div>
 
-
+<!--Bootstrap JS-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
         style=""></script>
@@ -43,5 +53,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
         style=""></script>
+
 </body>
 </html>
