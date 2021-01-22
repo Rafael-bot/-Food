@@ -22,7 +22,7 @@ def enviar_correo(nombre, apellido, userEmail, tlfn, continente, tema, mensaje):
     #Enviamos el email
     email.send()
 
-
+#Para aplicarse esta funcion se necesita estar logueado
 @login_required
 def lobby_views(request):
     #Almacenamos en objetos los datos cada tabla
